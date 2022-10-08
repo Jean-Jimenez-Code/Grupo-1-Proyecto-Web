@@ -1,0 +1,17 @@
+{
+  "name": "mongotest",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "node test.js",
+    "test_find_users": "node test_find_users.js",
+    "test_add_user": "node test_add_user.js",
+    "test_add_many_users": "node test_add_many_users.js",
+    "test_cloud": "node test_cloud.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^6.3.6"
+  }
+}
