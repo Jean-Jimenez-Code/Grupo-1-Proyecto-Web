@@ -6,6 +6,7 @@ var cors = require('cors');
 
 var stRouter = require('./routes/st');
 
+
 var app = express();
 
 app.use(cors());
@@ -16,5 +17,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/st', stRouter);
+
 
 module.exports = app;
