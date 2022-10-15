@@ -1,5 +1,5 @@
 # Grupo-1-Proyecto-Web
-Grupo 1: Planificación Semana 03 de Octubre
+Grupo 1: Planificación Semana 10 de Octubre
 
 -Se ha implementa la lista al presionar el boton, y se colocan algunos datos de productos y sus precios  
 -Los integrantes prueban y testean los codigos de la tarea 8
