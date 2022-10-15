@@ -1,13 +1,11 @@
 # Grupo-1-Proyecto-Web
 Grupo 1: Planificación Semana 03 de Octubre
 
--Se ha comenzado con la parte inicial del backend y frontend  
--El CRUD de productos[parte inicial en MongoDB] se ha iniciado por separado, para luego incorporarlo junto al backend y frontend  
--De momento nos vamos a guiar de los elementos y posiciones del 1er boceto creado, en la proxima semana pensamos ir con el diseño mas especifico de elementos
+-Se ha implementa la lista al presionar el boton, y se colocan algunos datos de productos y sus precios  
+-Los integrantes prueban y testean los codigos de la tarea 8
+-Se crea un 2do boceto sobre como seria la página, y se busca tutoriales para usar vue con css
 
-[X]Crear repositorio github  
-[X]Los integrantes instalan los programas necesarios para el repositorio y el comienzo del proyecto  
-[X]Definir tareas  
-[X]Crear proyecto inicial de backend  
-[X]Planificación y principio para el CRUD de los productos  
-[X]Crear el proyecto inicial de la interfaz e identificar elementos informáticos [botones, labels, etc] 
+- [X] Crear operaciones para usar los datos seleccionados en la creación de una lista
+- [X] Añadir al botón, una  lista de productos escogidos, y sus precios
+- [X] Revisar y probar códigos de la Tarea 8, e intentar implementar el proyecto inicial de MongoDB 
+- [X] Dar ideas del diseño de la página web 
