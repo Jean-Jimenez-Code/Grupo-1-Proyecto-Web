@@ -1,0 +1,13 @@
+{
+  "name": "mongotest",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+   "test": "node test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+  "mongoose": "^6.3.6"
+  }
+}
