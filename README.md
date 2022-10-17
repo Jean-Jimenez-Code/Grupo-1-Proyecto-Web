@@ -7,7 +7,9 @@ Grupo 1: Planificación Semana 10 de Octubre
 
 -Se buscara realizar en las siguientes tareas la conexion con mongoDB y el proceso para llevar los datos a la base de datos
 
+[Se muestra en el Archivo DOC, parte del proceso de las tareas]
+
 - [X] Crear operaciones para usar los datos seleccionados en la creación de una lista
 - [X] Añadir al botón, una  lista de productos escogidos, y sus precios
 - [X] Revisar y probar códigos de la Tarea 8, e intentar implementar el proyecto inicial de MongoDB 
-- [X] Dar ideas del diseño de la página web 
+- [X] Dar ideas del diseño de la página web, como un nuevo boceto,  elementos de css, etc. 
