@@ -4,6 +4,7 @@ Grupo 1: Planificación Semana 10 de Octubre
 -Se ha implementa la lista al presionar el boton, y se colocan algunos datos de productos y sus precios  
 -Los integrantes prueban y testean los codigos de la tarea 8  
 -Se crea un 2do boceto sobre como seria la página, y se busca tutoriales para usar vue con css
+-Se buscara realizar en las siguientes tareas la conexion con mongoDB y el proceso para llevar los datos a la base de datos
 
 - [X] Crear operaciones para usar los datos seleccionados en la creación de una lista
 - [X] Añadir al botón, una  lista de productos escogidos, y sus precios
