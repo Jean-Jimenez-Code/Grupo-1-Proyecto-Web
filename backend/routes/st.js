@@ -11,16 +11,22 @@ router.post('/', function(req, res, _) {
   let suma6 = req.body.suma6
   let suma7 = req.body.suma7
   let suma8 = req.body.suma8
+  let suma9 = req.body.suma9
+  let suma10 = req.body.suma10
+  let suma11 = req.body.suma11
   let st=0
-  if(suma1 >0 ||suma2>0 || suma3 >0 ||suma4>0 ||suma5>0||suma6>0||suma7>0||suma8>0){
+  if(suma1 >0 ||suma2>0 || suma3 >0 ||suma4>0 ||suma5>0||suma6>0||suma7>0||suma8>0||suma9>0||suma10>0||suma11>0){
       st=suma1*17700
       st=st +suma2*2700
-      st=st +suma3*1490
+      st=st +suma3*2700
       st=st +suma4*5990
       st=st +suma5*3190
       st=st +suma6*2289
-      st=st +suma7*2400
-      st=st +suma8*2287
+      st=st +suma7*1490
+      st=st +suma8*2400
+      st=st +suma9*2287
+      st=st +suma10*2990
+      st=st +suma11*1490
     }
   else{
     st=0

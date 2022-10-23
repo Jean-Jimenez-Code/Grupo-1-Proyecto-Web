@@ -1,47 +1,67 @@
 <template>
 <h1>BUBBLES</h1>
-<br><label>ACE<br>
+
+<br><label>{{b}}<br>
 Detergente Ace Naturals perfumante Pack 4 unds 2.8 Lts 
 <br>$17.700</label>
 <input v-model='cant1' type="number">
 <label> $ {{suma1}}</label><br>
 
-<br><label>VIRUTEX
+<br><label>{{v}} <br>
 Paños Multiuso - 3 UN<br>
 $ 2.700</label>
 <input v-model='cant2' type="number">
 <label> $ {{suma2}}</label><br>
 
-<br><label>CLOROX <br>
-CLORO TRADICIONAL 1000 CC CLOROX<br>
-$ 1.490</label>
+<br><label>{{v}} <br>
+Trapero Desinfección C/Ojal -10 UN<br>
+$ 2.700</label>
 <input v-model='cant3' type="number">
 <label> $ {{suma3}}</label><br>
 
-<br><label>Pack 2 Escobillas De Wc Sopapo Baño Limpieza Desinfección<br>
+<br><label>{{v}}<br>Pack 2 Escobillas De Wc Sopapo Baño Limpieza Desinfección<br>
 $ 5.990</label>
 <input v-model='cant4' type="number">
 <label> $ {{suma4}}</label><br>
 
-<br><label>Guante Nitrilo Flocado Estándar N°9<br> $3.190</label>
+<br><label>{{v}}<br>
+Guante Nitrilo Flocado Estándar N°9<br> $3.190</label>
 <input v-model='cant5' type="number">
 <label> $ {{suma5}}</label><br>
 
-<br><label>Virutilla <br> gruesa grande  clásica<br> $2.289</label>
+<br><label>{{v}}<br>
+  Virutilla gruesa grande  clásica<br> $2.289</label>
 <input v-model='cant6' type="number">
 <label> $ {{suma6}}</label><br>
 
-<br><label>LAVALOZAS <br> QUIX 750 ML<br> $2.400</label>
+<br><label>{{cl}} <br>
+CLORO TRADICIONAL 1000 CC CLOROX<br>
+$ 1.490</label>
 <input v-model='cant7' type="number">
 <label> $ {{suma7}}</label><br>
 
-<br><label>Lysoform Ambientes y Superficies<br> $2.287</label>
+<br><label>{{q}} <br> lavalozas 750 ML<br> $2.400</label>
 <input v-model='cant8' type="number">
-<label> $ {{suma8}}</label><br><br>
+<label> $ {{suma8}}</label><br>
+
+<br><label>{{l}}<br> Ambientes y Superficies<br> $2.287</label>
+<input v-model='cant9' type="number">
+<label> $ {{suma9}}</label><br><br>
+
+<br><label>{{va}}<br> Quitamancha en polvo rosa doypack 450 gr<br>$4.990</label>
+<input v-model='cant10' type="number">
+<label> $ {{suma10}}</label><br><br>
+
+<br><label>{{no}}<br> Toalla Nova Clásica Bajo Metraje 1 Hoja 3 Rollos x 12,5 mts<br>$1.490</label>
+<input v-model='cant11' type="number">
+<label> $ {{suma11}}</label><br><br>
 
 <button @click ='sumatotal'>total ${{st}} </button><br><br>
 <button @click ='genlista'>lista </button>
 <label>{{ls}} </label>
+
+<button @click ='update'>a </button>
+<label>{{a}} </label>
 
 
 </template>
@@ -59,6 +79,15 @@ $ 5.990</label>
   })
   const cant1=ref(0)
 
+  const b= ref("ACE")
+  const v=ref("VIRUTEX")
+  const cl=ref("CLOROX")
+  const q=ref("QUIX")
+  const l=ref("lysoform")
+  const va=ref("VANISH")
+  const no=ref("NOVA CLASICA")
+
+
   const suma2= computed(() => {
     if(cant2.value >0){
       return cant2.value*2700
@@ -70,7 +99,7 @@ $ 5.990</label>
 
   const suma3= computed(() => {
     if(cant3.value >0){
-      return cant3.value*1490
+      return cant3.value*2700
     }else{
      return '0'
     }
@@ -106,7 +135,7 @@ $ 5.990</label>
 
   const suma7= computed(() => {
     if(cant7.value >0){
-      return cant7.value*2400
+      return cant7.value*1490
     }else{
      return '0'
     }
@@ -115,35 +144,78 @@ $ 5.990</label>
 
   const suma8= computed(() => {
     if(cant8.value >0){
-      return cant8.value*2287
+      return cant8.value*2400
     }else{
      return '0'
     }
   })
   const cant8=ref(0)
 
+  const suma9= computed(() => {
+    if(cant9.value >0){
+      return cant9.value*2287
+    }else{
+     return '0'
+    }
+  })
+  const cant9=ref(0)
+
+  const suma10= computed(() => {
+    if(cant10.value >0){
+      return cant10.value*4990
+    }else{
+     return '0'
+    }
+  })
+  const cant10=ref(0)
+
+  const suma11= computed(() => {
+    if(cant11.value >0){
+      return cant11.value*1490
+    }else{
+     return '0'
+    }
+  })
+  const cant11=ref(0)
+
+  let a=ref()
+  let update=function(){
+    axios
+    .get('https://localhost:3000/db')
+    .then(response =>{
+      a =response.data.db
+    })
+  }
+
+
   const st=ref(0)
   const ls=ref()
   let sumatotal = function(){
     axios
-    .post('http://localhost:3000/st',{'suma1':cant1.value,'suma2':cant2.value,'suma3':cant3.value,'suma4':cant4.value,'suma5':cant5.value, 'suma6':cant6.value,'suma7':cant7.value,'suma8':cant8.value})
+    .post('http://localhost:3000/st',{'suma1':cant1.value,'suma2':cant2.value,'suma3':cant3.value,'suma4':cant4.value,'suma5':cant5.value, 'suma6':cant6.value,'suma7':cant7.value,'suma8':cant8.value,'suma9':cant9.value,'suma10':cant10.value,'suma11':cant11.value})
     .then(response =>{
       st.value=response.data.st
+      
     })
   }
+  
   let genlista = function(){
-    if(cant1.value>0 || cant2.value>0 || cant3.value>0 || cant4.value>0 || cant5.value>0|| cant6.value>0 || cant7.value>0 || cant8.value>0){
+    if(cant1.value>0 || cant2.value>0 || cant3.value>0 || cant4.value>0 || cant5.value>0|| cant6.value>0 || cant7.value>0 || cant8.value>0|| cant9.value>0 || cant10.value>0 || cant11.value>0){
       alert(" Detergente Ace Naturals perfumante Pack 4 unds 2.8 Lts  \n: cantidad :"+cant1.value +" $ " +suma1.value+ 
       "\n Paños Multiuso \n cantidad : :" +cant2.value +" $ " +suma2.value+
-      "\n CLORO TRADICIONAL \n cantidad :" +cant3.value +" $ " +suma3.value+
+      "\n Trapero Desinfección C/Ojal -10 UN\n cantidad : :" +cant3.value +" $ " +suma3.value+
       "\n Pack 2 Escobillas De Wc Sopapo Baño Limpieza Desinfección: \n cantidad :" +cant4.value +" $ " +suma4.value+
       "\n Guante Nitrilo Flocado Estándar N°9\n cantidad :" +cant5.value +" $ " +suma5.value+ 
       "\n Virutilla\n cantidad :" +cant6.value +" $ " +suma6.value+
-      "\n LAVALOZAS\n cantidad :" +cant7.value +" $ " +suma7.value+
-      "\n Lysoform Ambientes y Superficies\n cantidad :" +cant8.value +" $ " +suma8.value+ "\n total : $" +st.value); 
+      "\n CLORO TRADICIONAL \n cantidad :" +cant7.value +" $ " +suma7.value+      
+      "\n LAVALOZAS\n cantidad :" +cant8.value +" $ " +suma8.value+
+      "\n Lysoform Ambientes y Superficies\n cantidad :" +cant9.value +" $ " +suma9.value+
+      "\n Quitamancha en polvo rosa doypack 450 gr\n cantidad :" +cant10.value +" $ " +suma10.value+
+      "\n Toalla Nova Clásica Bajo Metraje 1 Hoja 3 Rollos x 12,5 mts\n cantidad :" +cant9.value +" $ " +suma9.value+ "total : $"+st.value); 
+
     }
-    
   }
+
 </script>
 
 
