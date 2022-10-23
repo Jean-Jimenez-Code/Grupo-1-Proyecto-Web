@@ -4,10 +4,15 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require('cors');
 
+var db = require('./config/db');
+
+db(); 
+
 var stRouter = require('./routes/st');
 
 
 var app = express();
+
 
 app.use(cors());
 app.use(logger('dev'));
@@ -16,7 +21,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 app.use('/st', stRouter);
+
 
 
 module.exports = app;
