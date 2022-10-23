@@ -1,58 +1,63 @@
 <template>
 <h1>BUBBLES</h1>
 
-<br><label>{{b}}<br>
-Detergente Ace Naturals perfumante Pack 4 unds 2.8 Lts 
+<br><label><h3>{{b}}</h3>  <img  width="150" src="./assets/detergente.png" ><br>
+Detergente Ace Naturals<br> perfumante Pack 4 unds 2.8 Lts 
 <br>$17.700</label>
 <input v-model='cant1' type="number">
-<label> $ {{suma1}}</label><br>
+<label> $ {{suma1}}</label>
 
-<br><label>{{v}} <br>
+<label><h3>{{v}}</h3>  <img  width="150" src="./assets/paño.png" > <br>
 Paños Multiuso - 3 UN<br>
 $ 2.700</label>
 <input v-model='cant2' type="number">
 <label> $ {{suma2}}</label><br>
 
-<br><label>{{v}} <br>
+<br><label><h3>{{v}}</h3> <img  height="160" width="180" src="./assets/trapero.png"><br>
 Trapero Desinfección C/Ojal -10 UN<br>
 $ 2.700</label>
 <input v-model='cant3' type="number">
 <label> $ {{suma3}}</label><br>
 
-<br><label>{{v}}<br>Pack 2 Escobillas De Wc Sopapo Baño Limpieza Desinfección<br>
+<br><label><h3>{{v}}</h3> <img  width="150" src="./assets/escobilla.jpg" ><br>
+ Pack 2 Escobillas De Wc Sopapo Baño Limpieza Desinfección<br>
 $ 5.990</label>
 <input v-model='cant4' type="number">
 <label> $ {{suma4}}</label><br>
 
-<br><label>{{v}}<br>
-Guante Nitrilo Flocado Estándar N°9<br> $3.190</label>
+<br><label><h3>{{v}}</h3><img  width="150" src="./assets/guante.jpg" > <br>
+Guante Conveniente M - UN<br> $3.190</label>
 <input v-model='cant5' type="number">
 <label> $ {{suma5}}</label><br>
 
-<br><label>{{v}}<br>
+<br><label><h3>{{v}}</h3> <img  width="150" src="./assets/virutilla.png" > <br>
   Virutilla gruesa grande  clásica<br> $2.289</label>
 <input v-model='cant6' type="number">
 <label> $ {{suma6}}</label><br>
 
-<br><label>{{cl}} <br>
+<br><label><h3>{{cl}} </h3> <img  width="150" src="./assets/cloro.png" > <br>
 CLORO TRADICIONAL 1000 CC CLOROX<br>
 $ 1.490</label>
 <input v-model='cant7' type="number">
 <label> $ {{suma7}}</label><br>
 
-<br><label>{{q}} <br> lavalozas 750 ML<br> $2.400</label>
+<br><label><h3>{{q}}</h3> <img  width="150" src="./assets/quix.png" >
+<br> lavalozas 750 ML<br> $2.400</label>
 <input v-model='cant8' type="number">
 <label> $ {{suma8}}</label><br>
 
-<br><label>{{l}}<br> Ambientes y Superficies<br> $2.287</label>
+<br><label><h3>{{l}}</h3> <img  width="150" src="./assets/lysof.jpeg" >
+<br> Ambientes y Superficies<br> $2.287</label>
 <input v-model='cant9' type="number">
 <label> $ {{suma9}}</label><br><br>
 
-<br><label>{{va}}<br> Quitamancha en polvo rosa doypack 450 gr<br>$4.990</label>
+<br><label><h3>{{va}}</h3> <img  width="150" src="./assets/vanish.jpg" >
+<br> Quitamancha en polvo rosa doypack 450 gr<br>$4.990</label>
 <input v-model='cant10' type="number">
 <label> $ {{suma10}}</label><br><br>
 
-<br><label>{{no}}<br> Toalla Nova Clásica Bajo Metraje 1 Hoja 3 Rollos x 12,5 mts<br>$1.490</label>
+<br><label><h3>{{no}}</h3> <img  width="150" src="./assets/nova.jpg" >
+<br> Toalla Nova Clásica Bajo Metraje 1 Hoja 3 Rollos x 12,5 mts<br>$1.490</label>
 <input v-model='cant11' type="number">
 <label> $ {{suma11}}</label><br><br>
 
@@ -226,6 +231,7 @@ $ 1.490</label>
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 50px;
+
 }
 </style>
