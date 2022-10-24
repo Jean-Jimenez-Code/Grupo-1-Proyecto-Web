@@ -1,5 +1,5 @@
 # Grupo-1-Proyecto-Web
-Grupo 1: Planificación Semana 10 de Octubre
+Grupo 1: Planificación semana 17 de Octubre
 
 -Se ha implementa la lista al presionar el boton, y se colocan algunos datos de productos y sus precios  
 -Los integrantes prueban y testean los codigos de la tarea 8  
@@ -9,7 +9,8 @@ Grupo 1: Planificación Semana 10 de Octubre
 
 [Se muestra en el Archivo DOC, parte del proceso de las tareas]
 
-- [X] Crear operaciones para usar los datos seleccionados en la creación de una lista
-- [X] Añadir al botón, una  lista de productos escogidos, y sus precios
-- [X] Revisar y probar códigos de la Tarea 8, e intentar implementar el proyecto inicial de MongoDB 
-- [X] Dar ideas del diseño de la página web, como un nuevo boceto,  elementos de css, etc. 
+- [X] Definir tareas
+- [X] Añadir las variables marca y peso a los datos de los productos
+- [X] Ingresar imágenes en el frontend con vue
+- [X] Revisar material para el uso del mongodb en el backend, creación del archivo de datos
+- [X] Corregir código en backend de App.js
