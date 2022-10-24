@@ -10,7 +10,7 @@ Grupo 1: Planificación semana 17 de Octubre
 [Se muestra en el Archivo DOC, parte del proceso de las tareas]
 
 - [X] Definir tareas
-- [X] Añadir las variables marca y peso a los datos de los productos
+- [X] Añadir las variables marca a los datos de los productos, y revisar otras variables.
 - [X] Ingresar imágenes en el frontend con vue
-- [X] Revisar material para el uso del mongodb en el backend, creación del archivo de datos
+- [X] Revisar material para el uso del mongodb  sobre la creación del archivo de datos que se procesara en mongoDB compass
 - [X] Corregir código en backend de App.js
