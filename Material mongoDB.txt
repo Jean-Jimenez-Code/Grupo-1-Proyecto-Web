@@ -1,0 +1,11 @@
+Revisar los materiales sobre mongoDB
+
+-Tarea 8
+-Express, Node, and MongoDB
+https://www.mongodb.com/languages/express-mongodb-rest-api-tutorial
+-Vue.js, Express & MongoDB
+https://www.youtube.com/watch?v=j55fHUJqtyw
+-Nodejs y Mongodb
+https://www.youtube.com/watch?v=-bI0diefasA
+-MongoDB Compass Creación
+https://www.youtube.com/watch?v=8gbDA7kH5zg
