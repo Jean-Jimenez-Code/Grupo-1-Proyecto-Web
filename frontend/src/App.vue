@@ -1,72 +1,95 @@
 <template>
 <h1>BUBBLES</h1>
 
+
+<div class=detergente style="color: blue;"  >
 <br><label><h3>{{b}}</h3>  <img  width="150" src="./assets/detergente.png" ><br>
 Detergente Ace Naturals<br> perfumante Pack 4 unds 2.8 Lts 
 <br>$17.700</label>
 <input v-model='cant1' type="number">
 <label> $ {{suma1}}</label>
+</div>
 
+<div class=paños style="color: blue;"  >
 <label><h3>{{v}}</h3>  <img  width="150" src="./assets/paño.png" > <br>
 Paños Multiuso - 3 UN<br>
 $ 2.700</label>
 <input v-model='cant2' type="number">
 <label> $ {{suma2}}</label><br>
+</div>
 
+<div class=trapero style="color: blue;"  >
 <br><label><h3>{{v}}</h3> <img  height="160" width="180" src="./assets/trapero.png"><br>
 Trapero Desinfección C/Ojal -10 UN<br>
 $ 2.700</label>
 <input v-model='cant3' type="number">
 <label> $ {{suma3}}</label><br>
+</div>
 
-<br><label><h3>{{v}}</h3> <img  width="150" src="./assets/escobilla.jpg" ><br>
+<div class=escobilla style="color: blue;"  >
+<br><label><h3>{{v}}</h3> <img  width="150" src="./assets/escobilla.png" ><br>
  Pack 2 Escobillas De Wc Sopapo Baño Limpieza Desinfección<br>
 $ 5.990</label>
 <input v-model='cant4' type="number">
 <label> $ {{suma4}}</label><br>
+</div>
 
-<br><label><h3>{{v}}</h3><img  width="150" src="./assets/guante.jpg" > <br>
+<div class=guante style="color: blue;"  >
+<br><label><h3>{{v}}</h3><img  width="150" src="./assets/guante.png" > <br>
 Guante Conveniente M - UN<br> $3.190</label>
 <input v-model='cant5' type="number">
 <label> $ {{suma5}}</label><br>
+</div>
 
+<div class=virutilla style="color: blue;"  >
 <br><label><h3>{{v}}</h3> <img  width="150" src="./assets/virutilla.png" > <br>
   Virutilla gruesa grande  clásica<br> $2.289</label>
 <input v-model='cant6' type="number">
 <label> $ {{suma6}}</label><br>
+</div>
 
+<div class=cloro style="color: blue;"  >
 <br><label><h3>{{cl}} </h3> <img  width="150" src="./assets/cloro.png" > <br>
 CLORO TRADICIONAL 1000 CC CLOROX<br>
 $ 1.490</label>
 <input v-model='cant7' type="number">
 <label> $ {{suma7}}</label><br>
+</div>
 
+<div class=lavalozas style="color: blue;"  >
 <br><label><h3>{{q}}</h3> <img  width="150" src="./assets/quix.png" >
 <br> lavalozas 750 ML<br> $2.400</label>
 <input v-model='cant8' type="number">
 <label> $ {{suma8}}</label><br>
+</div>
 
-<br><label><h3>{{l}}</h3> <img  width="150" src="./assets/lysof.jpeg" >
+<div class=lysof style="color: blue;"  >
+<br><label><h3>{{l}}</h3> <img  width="150" src="./assets/lysof.png" >
 <br> Ambientes y Superficies<br> $2.287</label>
 <input v-model='cant9' type="number">
 <label> $ {{suma9}}</label><br><br>
+</div>
 
-<br><label><h3>{{va}}</h3> <img  width="150" src="./assets/vanish.jpg" >
+<div class=vanish style="color: blue;"  >
+<br><label><h3>{{va}}</h3> <img  width="150" src="./assets/vanish.png" >
 <br> Quitamancha en polvo rosa doypack 450 gr<br>$4.990</label>
 <input v-model='cant10' type="number">
 <label> $ {{suma10}}</label><br><br>
+</div>
 
-<br><label><h3>{{no}}</h3> <img  width="150" src="./assets/nova.jpg" >
-<br> Toalla Nova Clásica Bajo Metraje 1 Hoja 3 Rollos x 12,5 mts<br>$1.490</label>
+<div class=nova style="color: blue;"  >
+<br><label><h3>{{no}}</h3> <img  width="150" src="./assets/nova.png" >
+<br> Toalla Nova Clásica Bajo Metraje<br> 1 Hoja 3 Rollos x 12,5 mts<br>$1.490</label>
 <input v-model='cant11' type="number">
 <label> $ {{suma11}}</label><br><br>
+</div>
 
+<div class=boton >
 <button @click ='sumatotal'>total ${{st}} </button><br><br>
 <button @click ='genlista'>lista </button>
 <label>{{ls}} </label>
+</div>
 
-<button @click ='update'>a </button>
-<label>{{a}} </label>
 
 
 </template>
@@ -183,14 +206,7 @@ $ 1.490</label>
   })
   const cant11=ref(0)
 
-  let a=ref()
-  let update=function(){
-    axios
-    .get('https://localhost:3000/db')
-    .then(response =>{
-      a =response.data.db
-    })
-  }
+  
 
 
   const st=ref(0)
@@ -216,7 +232,7 @@ $ 1.490</label>
       "\n LAVALOZAS\n cantidad :" +cant8.value +" $ " +suma8.value+
       "\n Lysoform Ambientes y Superficies\n cantidad :" +cant9.value +" $ " +suma9.value+
       "\n Quitamancha en polvo rosa doypack 450 gr\n cantidad :" +cant10.value +" $ " +suma10.value+
-      "\n Toalla Nova Clásica Bajo Metraje 1 Hoja 3 Rollos x 12,5 mts\n cantidad :" +cant9.value +" $ " +suma9.value+ "total : $"+st.value); 
+      "\n Toalla Nova Clásica Bajo Metraje 1 Hoja 3 Rollos x 12,5 mts\n cantidad :" +cant11.value +" $ " +suma11.value+ "\ntotal : $"+st.value); 
 
     }
   }
@@ -226,12 +242,150 @@ $ 1.490</label>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-style:oblique;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 50px;
-
+  color: #ff6c0a;
+  
+  background-image: url(./assets/celeste.jpg);
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+  background-size:cover;
 }
+.detergente 
+{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style:italic;
+  font-weight: 700;
+  position:center;
+  top:19%;
+  left: 20%;
+  margin-top: -5px;
+  margin-left: -800px;
+}
+
+.paños
+{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style:italic;
+  font-weight: 700;
+  position:center;
+  top:19%;
+  left: 20%;
+  margin-top: -290px;
+  margin-left: 50px;
+}
+
+.trapero
+{
+  font-family: Georgia, "Times New Roman", Times, serif;
+   font-style:italic;
+  font-weight: 700;
+  position:center;
+  top:19%;
+  left: 75%;
+  margin-top: -279px;
+  margin-left: 800px;
+}
+.escobilla
+{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style:italic;
+  font-weight: 700;
+  position:center;
+  top:60%;
+  left:14%;
+  margin-top: 80px;
+  margin-left: -800px;
+}
+
+.guante
+{
+  font-family: Georgia, "Times New Roman", Times, serif;
+   font-style:italic;
+  font-weight: 700;
+  position:center;
+  top:60%;
+  left:14%;
+  margin-top: -270px;
+  margin-left: 50px;
+}
+.virutilla
+{
+  font-family: Georgia, "Times New Roman", Times, serif;
+   font-style:italic;
+  font-weight: 700;
+ position:center;
+  top:56%;
+  left: 76%;
+  margin-top: -270px;
+  margin-left: 800px;
+}
+.cloro
+{
+  font-family: Georgia, "Times New Roman", Times, serif;
+   font-style:italic;
+  font-weight: 700;
+  position:center;
+  top:98%;
+  left: 19%;
+  margin-top: 60px;
+  margin-left: -800px;
+}
+.lavalozas
+{
+  font-family: Georgia, "Times New Roman", Times, serif;
+   font-style:italic;
+  font-weight: 700;
+  position:center;
+  top:98%;
+  left: 19%;
+  margin-top: -280px;
+  margin-left: 50px;
+}
+.lysof
+{
+  font-family: Georgia, "Times New Roman", Times, serif;
+   font-style:italic;
+  font-weight: 700;
+  position:center;
+  top:92%;
+  left: 77%;
+  margin-top: -280px;
+  margin-left: 800px;
+}
+.vanish
+{
+  font-family: Georgia, "Times New Roman", Times, serif;
+   font-style:italic;
+  font-weight: 700;
+  position:center;
+  top:100%;
+  left: 1%;
+  margin-top: 10px;
+  margin-left: -800px;
+}
+.nova
+{
+  font-family: Georgia, "Times New Roman", Times, serif;
+   font-style:italic;
+  font-weight: 700;
+  position:center;
+  top:100%;
+  left: 100%;
+  margin-top: -290px;
+  margin-left: 50px;
+}
+.boton
+{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  position:center;
+  top:100%;
+  left: 100%;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+
 </style>
+
