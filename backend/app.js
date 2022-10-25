@@ -4,11 +4,11 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require('cors');
 
-var db = require('./config/db');
+var db = require('./config/db');//llamar al archivo posicionado en config 
 
-db(); 
+db(); //ejecutar el archivo db
 
-var stRouter = require('./routes/st');
+var stRouter = require('./routes/st'); //para conectar con ruta st
 
 
 var app = express();
@@ -22,7 +22,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-app.use('/st', stRouter);
+app.use('/st', stRouter);//para conectar y usar ruta st
 
 
 

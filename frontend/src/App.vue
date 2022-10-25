@@ -1,13 +1,13 @@
 <template>
-<h1>BUBBLES</h1>
+<h1>BUBBLES</h1><!-- titulo de la pag -->
 
-
-<div class=detergente style="color: blue;"  >
-<br><label><h3>{{b}}</h3>  <img  width="150" src="./assets/detergente.png" ><br>
+<!--creacion de bloques -->
+<div class=detergente style="color: blue;" ><!--bloque llamado detergente de colo azul , para luego poder colocar su posicion en style -->
+<br><label><h3>{{b}}</h3>  <img  width="150" src="./assets/detergente.png" ><br> <!--br para hacer salto de linea -->
 Detergente Ace Naturals<br> perfumante Pack 4 unds 2.8 Lts 
 <br>$17.700</label>
 <input v-model='cant1' type="number">
-<label> $ {{suma1}}</label>
+<label> $ {{suma1}}</label> <!--variable suma1 que mostrara un valor guardado en scrypt  -->
 </div>
 
 <div class=paños style="color: blue;"  >
@@ -84,6 +84,7 @@ $ 1.490</label>
 <label> $ {{suma11}}</label><br><br>
 </div>
 
+<!--creacion de botones -->
 <div class=boton >
 <button @click ='sumatotal'>total ${{st}} </button><br><br>
 <button @click ='genlista'>lista </button>
@@ -98,15 +99,16 @@ $ 1.490</label>
   import {ref,computed} from 'vue'
   import axios from 'axios'
 
-  const suma1= computed(() => {
+  const suma1= computed(() => { //cuando cantidad sea mayo de 0, se multiplique por el precio mostrado y retorne el resultado
     if(cant1.value >0){
       return cant1.value*17700
     }else{
      return '0'
     }
   })
-  const cant1=ref(0)
+  const cant1=ref(0) //se muestra inicialmente en 0
 
+   //guardar los nombres de las marcas en variables 
   const b= ref("ACE")
   const v=ref("VIRUTEX")
   const cl=ref("CLOROX")
@@ -206,21 +208,24 @@ $ 1.490</label>
   })
   const cant11=ref(0)
 
-  
-
 
   const st=ref(0)
   const ls=ref()
-  let sumatotal = function(){
+
+  let sumatotal = function(){//funcion de boton
     axios
-    .post('http://localhost:3000/st',{'suma1':cant1.value,'suma2':cant2.value,'suma3':cant3.value,'suma4':cant4.value,'suma5':cant5.value, 'suma6':cant6.value,'suma7':cant7.value,'suma8':cant8.value,'suma9':cant9.value,'suma10':cant10.value,'suma11':cant11.value})
+    //enviar los datos a la ruta st de backend
+    .post('http://localhost:3000/st',{'suma1':cant1.value,'suma2':cant2.value,'suma3':cant3.value,'suma4':cant4.value,'suma5':cant5.value, 'suma6':cant6.value,'suma7':cant7.value,'suma8':cant8.value,
+    'suma9':cant9.value,'suma10':cant10.value,'suma11':cant11.value})// con las '' selecciona el nombre que tendra en la ruta, y el valor que se guardara en ese nombre 
+
     .then(response =>{
-      st.value=response.data.st
-      
+      st.value=response.data.st   //devolver el valor desde la ruta st para guardarlo en la variable st
     })
   }
   
+  //funcion de boton
   let genlista = function(){
+    //si existe algun valor en cant , se podra mostra una ventana emergente con los datos ingresados
     if(cant1.value>0 || cant2.value>0 || cant3.value>0 || cant4.value>0 || cant5.value>0|| cant6.value>0 || cant7.value>0 || cant8.value>0|| cant9.value>0 || cant10.value>0 || cant11.value>0){
       alert(" Detergente Ace Naturals perfumante Pack 4 unds 2.8 Lts  \n: cantidad :"+cant1.value +" $ " +suma1.value+ 
       "\n Paños Multiuso \n cantidad : :" +cant2.value +" $ " +suma2.value+
@@ -242,7 +247,6 @@ $ 1.490</label>
 
 <style>
 #app {
-  
   -webkit-font-smoothing: antialiased;
   font-style:oblique;
   text-align: center;
@@ -279,8 +283,9 @@ $ 1.490</label>
 
 .trapero
 {
+  
   font-family: Georgia, "Times New Roman", Times, serif;
-   font-style:italic;
+  font-style:italic;
   font-weight: 700;
   position:center;
   top:19%;
@@ -288,6 +293,7 @@ $ 1.490</label>
   margin-top: -279px;
   margin-left: 800px;
 }
+
 .escobilla
 {
   font-family: Georgia, "Times New Roman", Times, serif;
