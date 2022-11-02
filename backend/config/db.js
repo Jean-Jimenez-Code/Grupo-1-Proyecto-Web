@@ -37,8 +37,17 @@ module.exports = ()=>{ //para poder exportar la base
       
       Prod = model('Prod', ProdSchema)
       
-      data = [{'cantidad': '2', 'precio': '2700'}, //colocar los datos
-              {'cantidad': '4', 'precio': '2990'}]
+      data = [{'nombre': 'Detergente Ace Naturals perfumante Pack 4 unds 2.8 Lts ', 'cantidad': '1', 'precio': '$17.700'},
+      {'nombre': 'Paños Multiuso - 3 UN ', 'cantidad': '1', 'precio': '$ 2.700'},
+      {'nombre': 'Trapero Desinfección C/Ojal -10 UN ', 'cantidad': '1', 'precio': '$ 2.700 '},
+      {'nombre': 'Pack 2 Escobillas De Wc Sopapo Baño Limpieza Desinfección ', 'cantidad': '1', 'precio': '$ 5.990'},
+      {'nombre': 'Guante Conveniente M - UN ', 'cantidad': '1', 'precio': ' $3.190'},
+      {'nombre': 'Virutilla gruesa grande  clásica ', 'cantidad': '1', 'precio': '$2.289'},
+      {'nombre': 'CLORO TRADICIONAL 1000 CC CLOROX', 'cantidad': '1', 'precio': '$ 1.490'},
+      {'nombre': 'lavalozas 750 ML ', 'cantidad': '1', 'precio': '$2.400'},
+      {'nombre': 'Ambientes y Superficies', 'cantidad': '1', 'precio': ' $2.287'},
+      {'nombre': 'Quitamancha en polvo rosa doypack 450 gr ', 'cantidad': '1', 'precio': '$4.990'},
+      {'nombre': 'Toalla Nova Clásica Bajo Metraje ', 'cantidad': '1', 'precio': '$1.490'}]
       
       const addProd = async () => {
         await Prod.deleteMany({});
