@@ -5,7 +5,7 @@
 <div class=detergente style="color: blue;" ><!--bloque llamado detergente de colo azul , para luego poder colocar su posicion en style -->
 <br><label><h3>{{b}}</h3>  <img  width="150" src="./assets/detergente.png" ><br> <!--br para hacer salto de linea -->
 Detergente Ace Naturals<br> perfumante Pack 4 unds 2.8 Lts 
-<br>$17.700 X </label>
+<br>$17.700</label>
 <input v-model='cant1' type="number">
 <label> $ {{suma1}}</label> <!--variable suma1 que mostrara un valor guardado en scrypt  -->
 </div>
@@ -13,83 +13,85 @@ Detergente Ace Naturals<br> perfumante Pack 4 unds 2.8 Lts
 <div class=paños style="color: blue;"  >
 <label><h3>{{v}}</h3>  <img  width="150" src="./assets/paño.png" > <br>
 Paños Multiuso - 3 UN<br>
-$ 2.700 X </label>
+$ 2.700</label>
 <input v-model='cant2' type="number">
-<label> $ {{suma2}}</label><br> <!--variable suma2 que mostrara un valor guardado en scrypt  -->
+<label> $ {{suma2}}</label><br>
 </div>
 
 <div class=trapero style="color: blue;"  >
 <br><label><h3>{{v}}</h3> <img  height="160" width="180" src="./assets/trapero.png"><br>
 Trapero Desinfección C/Ojal -10 UN<br>
-$ 2.700 X </label>
+$ 2.700</label>
 <input v-model='cant3' type="number">
-<label> $ {{suma3}}</label><br> <!--variable suma3 que mostrara un valor guardado en scrypt  -->
+<label> $ {{suma3}}</label><br>
 </div>
 
 <div class=escobilla style="color: blue;"  >
 <br><label><h3>{{v}}</h3> <img  width="150" src="./assets/escobilla.png" ><br>
  Pack 2 Escobillas De Wc Sopapo Baño Limpieza Desinfección<br>
-$ 5.990 X </label>
+$ 5.990</label>
 <input v-model='cant4' type="number">
-<label> $ {{suma4}}</label><br> <!--variable suma4 que mostrara un valor guardado en scrypt  -->
+<label> $ {{suma4}}</label><br>
 </div>
 
 <div class=guante style="color: blue;"  >
 <br><label><h3>{{v}}</h3><img  width="150" src="./assets/guante.png" > <br>
-Guante Conveniente M - UN<br> $3.190 X </label>
+Guante Conveniente M - UN<br> $3.190</label>
 <input v-model='cant5' type="number">
-<label> $ {{suma5}}</label><br> <!--variable suma5 que mostrara un valor guardado en scrypt  -->
+<label> $ {{suma5}}</label><br>
 </div>
 
 <div class=virutilla style="color: blue;"  >
 <br><label><h3>{{v}}</h3> <img  width="150" src="./assets/virutilla.png" > <br>
-  Virutilla gruesa grande  clásica<br> $2.289 X </label>
+  Virutilla gruesa grande  clásica<br> $2.289</label>
 <input v-model='cant6' type="number">
-<label> $ {{suma6}}</label><br> <!--variable suma6 que mostrara un valor guardado en scrypt  -->
+<label> $ {{suma6}}</label><br>
 </div>
 
 <div class=cloro style="color: blue;"  >
 <br><label><h3>{{cl}} </h3> <img  width="150" src="./assets/cloro.png" > <br>
 CLORO TRADICIONAL 1000 CC CLOROX<br>
-$ 1.490 X </label>
+$ 1.490</label>
 <input v-model='cant7' type="number">
-<label> $ {{suma7}}</label><br> <!--variable suma7 que mostrara un valor guardado en scrypt  -->
+<label> $ {{suma7}}</label><br>
 </div>
 
 <div class=lavalozas style="color: blue;"  >
 <br><label><h3>{{q}}</h3> <img  width="150" src="./assets/quix.png" >
-<br> lavalozas 750 ML<br> $2.400 X </label>
+<br> lavalozas 750 ML<br> $2.400</label>
 <input v-model='cant8' type="number">
-<label> $ {{suma8}}</label><br> <!--variable suma8 que mostrara un valor guardado en scrypt  -->
+<label> $ {{suma8}}</label><br>
 </div>
 
 <div class=lysof style="color: blue;"  >
 <br><label><h3>{{l}}</h3> <img  width="150" src="./assets/lysof.png" >
-<br> Ambientes y Superficies<br> $2.287 X </label>
+<br> Ambientes y Superficies<br> $2.287</label>
 <input v-model='cant9' type="number">
-<label> $ {{suma9}}</label><br><br> <!--variable suma9 que mostrara un valor guardado en scrypt  -->
+<label> $ {{suma9}}</label><br><br>
 </div>
 
 <div class=vanish style="color: blue;"  >
 <br><label><h3>{{va}}</h3> <img  width="150" src="./assets/vanish.png" >
-<br> Quitamancha en polvo rosa doypack 450 gr<br>$4.990 X </label>
+<br> Quitamancha en polvo rosa doypack 450 gr<br>$4.990</label>
 <input v-model='cant10' type="number">
-<label> $ {{suma10}}</label><br><br> <!--variable suma10 que mostrara un valor guardado en scrypt  -->
+<label> $ {{suma10}}</label><br><br>
 </div>
 
 <div class=nova style="color: blue;"  >
 <br><label><h3>{{no}}</h3> <img  width="150" src="./assets/nova.png" >
-<br> Toalla Nova Clásica Bajo Metraje<br> 1 Hoja 3 Rollos x 12,5 mts<br>$1.490 X </label>
+<br> Toalla Nova Clásica Bajo Metraje<br> 1 Hoja 3 Rollos x 12,5 mts<br>$1.490</label>
 <input v-model='cant11' type="number">
-<label> $ {{suma11}}</label><br><br> <!--variable suma11 que mostrara un valor guardado en scrypt  -->
+<label> $ {{suma11}}</label><br><br>
 </div>
 
 <!--creacion de botones -->
 <div class=boton >
-<button @click ='sumatotal'>total ${{st}} </button><br><br>
-<button @click ='genlista'>lista </button>
-<label>{{ls}} </label>
+<button @click ='sumatotal'>total ${{st}} </button><br>
+
+<button @click ='genlista' >lista {{t}}</button>
 </div>
+<label>{{t}}</label>
+
 
 
 
@@ -98,9 +100,8 @@ $ 1.490 X </label>
 <script setup>
   import {ref,computed} from 'vue'
   import axios from 'axios'
-  
-  //Funcion de suma 1
-  const suma1= computed(() => { //Cuando cantidad sea mayor de 0, se multiplique por el precio mostrado y retorne el resultado
+ 
+  const suma1= computed(() => { //cuando cantidad sea mayo de 0, se multiplique por el precio mostrado y retorne el resultado
     if(cant1.value >0){
       return cant1.value*17700
     }else{
@@ -109,7 +110,7 @@ $ 1.490 X </label>
   })
   const cant1=ref(0) //se muestra inicialmente en 0
 
-   //Guarda los nombres de las marcas en variables 
+   //guardar los nombres de las marcas en variables 
   const b= ref("ACE")
   const v=ref("VIRUTEX")
   const cl=ref("CLOROX")
@@ -118,7 +119,8 @@ $ 1.490 X </label>
   const va=ref("VANISH")
   const no=ref("NOVA CLASICA")
 
-  const suma2= computed(() => { //Funcion de suma 2
+
+  const suma2= computed(() => {
     if(cant2.value >0){
       return cant2.value*2700
     }else{
@@ -127,7 +129,7 @@ $ 1.490 X </label>
   })
   const cant2=ref(0)
 
-  const suma3= computed(() => { //Funcion de suma 3
+  const suma3= computed(() => {
     if(cant3.value >0){
       return cant3.value*2700
     }else{
@@ -136,7 +138,7 @@ $ 1.490 X </label>
   })
   const cant3=ref(0)
 
-  const suma4= computed(() => { //Funcion de suma 4
+  const suma4= computed(() => {
     if(cant4.value >0){
       return cant4.value*5990
     }else{
@@ -145,7 +147,7 @@ $ 1.490 X </label>
   })
   const cant4=ref(0)
 
-  const suma5= computed(() => { //Funcion de suma 5
+  const suma5= computed(() => {
     if(cant5.value >0){
       return cant5.value*3190
     }else{
@@ -154,7 +156,7 @@ $ 1.490 X </label>
   })
   const cant5=ref(0)
 
-  const suma6= computed(() => { //Funcion de suma 6
+  const suma6= computed(() => {
     if(cant6.value >0){
       return cant6.value*2289
     }else{
@@ -163,7 +165,7 @@ $ 1.490 X </label>
   })
   const cant6=ref(0)
 
-  const suma7= computed(() => { //Funcion de suma 7
+  const suma7= computed(() => {
     if(cant7.value >0){
       return cant7.value*1490
     }else{
@@ -172,7 +174,7 @@ $ 1.490 X </label>
   })
   const cant7=ref(0)
 
-  const suma8= computed(() => { //Funcion de suma 8
+  const suma8= computed(() => {
     if(cant8.value >0){
       return cant8.value*2400
     }else{
@@ -181,7 +183,7 @@ $ 1.490 X </label>
   })
   const cant8=ref(0)
 
-  const suma9= computed(() => { //Funcion de suma 9
+  const suma9= computed(() => {
     if(cant9.value >0){
       return cant9.value*2287
     }else{
@@ -190,7 +192,7 @@ $ 1.490 X </label>
   })
   const cant9=ref(0)
 
-  const suma10= computed(() => { //Funcion de suma 10
+  const suma10= computed(() => {
     if(cant10.value >0){
       return cant10.value*4990
     }else{
@@ -199,7 +201,7 @@ $ 1.490 X </label>
   })
   const cant10=ref(0)
 
-  const suma11= computed(() => { //Funcion de suma 11
+  const suma11= computed(() => {
     if(cant11.value >0){
       return cant11.value*1490
     }else{
@@ -210,9 +212,8 @@ $ 1.490 X </label>
 
 
   const st=ref(0)
-  const ls=ref()
-
-  let sumatotal = function(){ //Funcion de boton
+  
+  let sumatotal = function(){//funcion de boton
     axios
     //enviar los datos a la ruta st de backend
     .post('http://localhost:3000/st',{'suma1':cant1.value,'suma2':cant2.value,'suma3':cant3.value,'suma4':cant4.value,'suma5':cant5.value, 'suma6':cant6.value,'suma7':cant7.value,'suma8':cant8.value,
@@ -222,26 +223,20 @@ $ 1.490 X </label>
       st.value=response.data.st   //devolver el valor desde la ruta st para guardarlo en la variable st
     })
   }
+
+  const t =ref()
   
   //funcion de boton
   let genlista = function(){
-    //si existe algun valor en cant , se podra mostra una ventana emergente con los datos ingresados
-    if(cant1.value>0 || cant2.value>0 || cant3.value>0 || cant4.value>0 || cant5.value>0|| cant6.value>0 || cant7.value>0 || cant8.value>0|| cant9.value>0 || cant10.value>0 || cant11.value>0){
-      alert(" Detergente Ace Naturals perfumante Pack 4 unds 2.8 Lts  \n: cantidad :"+cant1.value +" $ " +suma1.value+ 
-      "\n Paños Multiuso \n cantidad : :" +cant2.value +" $ " +suma2.value+
-      "\n Trapero Desinfección C/Ojal -10 UN\n cantidad : :" +cant3.value +" $ " +suma3.value+
-      "\n Pack 2 Escobillas De Wc Sopapo Baño Limpieza Desinfección: \n cantidad :" +cant4.value +" $ " +suma4.value+
-      "\n Guante Nitrilo Flocado Estándar N°9\n cantidad :" +cant5.value +" $ " +suma5.value+ 
-      "\n Virutilla\n cantidad :" +cant6.value +" $ " +suma6.value+
-      "\n CLORO TRADICIONAL \n cantidad :" +cant7.value +" $ " +suma7.value+      
-      "\n LAVALOZAS\n cantidad :" +cant8.value +" $ " +suma8.value+
-      "\n Lysoform Ambientes y Superficies\n cantidad :" +cant9.value +" $ " +suma9.value+
-      "\n Quitamancha en polvo rosa doypack 450 gr\n cantidad :" +cant10.value +" $ " +suma10.value+
-      "\n Toalla Nova Clásica Bajo Metraje 1 Hoja 3 Rollos x 12,5 mts\n cantidad :" +cant11.value +" $ " +suma11.value+ "\ntotal : $"+st.value); 
-
-    }
+    axios
+    .get('http://localhost:3000/ps')
+    
+    .then(response =>{
+      t.value=response.data.db
+    })
   }
 
+  
 </script>
 
 
