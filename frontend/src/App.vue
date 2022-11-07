@@ -134,12 +134,10 @@ $ 1.490</label>
 <div class=boton >
 <button @click ='sumatotal'>total ${{st}} </button><br>
 
-<button @click ='genlista' >lista {{t}}</button>
+<button @click ='genlista' >lista </button>
 </div>
-<label>{{productos}}</label>
-
-
-<label>{{nombre}}</label>     
+<label style="color: black;" >{{t}}</label>
+ 
 </template>
 
 <script setup>
@@ -276,13 +274,10 @@ $ 1.490</label>
     .get('http://localhost:3000/ps')
     .then(response => {
       console.log(response.data)
-      
-    
+      t.value=response.data
     })
-  
   }
 
-  
 </script>
 
 
