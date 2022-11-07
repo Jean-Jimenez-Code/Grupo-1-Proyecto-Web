@@ -130,7 +130,6 @@ $ 1.490</label>
 </div>
 
 
-
 <!--creacion de botones -->
 <div class=boton >
 <button @click ='sumatotal'>total ${{st}} </button><br>
@@ -140,13 +139,12 @@ $ 1.490</label>
 <label>{{productos}}</label>
 
 
-<label>{{prueba}}</label>     
+<label>{{nombre}}</label>     
 </template>
 
 <script setup>
   import {ref,computed} from 'vue'
   import axios from 'axios'
-
   
   const suma1= computed(() => { //cuando cantidad sea mayo de 0, se multiplique por el precio mostrado y retorne el resultado
     if(cant1.value >0){
@@ -272,13 +270,14 @@ $ 1.490</label>
   }
      const t = ref()
   //funcion de boton
+
   let genlista = function(){
     axios
-    
     .get('http://localhost:3000/ps')
-    
     .then(response => {
-      t.value=response.data.db
+      console.log(response.data)
+      
+    
     })
   
   }
