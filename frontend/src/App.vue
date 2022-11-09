@@ -137,28 +137,13 @@ $ 1.490</label>
 
 </div>
 <br>
-<label style="color: black;" >{{det}}</label>
+<div v-for="d in det" :key="d">
+  <label style="color: black;" >{{d.nombre}}</label>
+  <br>
+</div>
+
 <br>
-<label style="color: black;" >{{pan}}</label>
-<br>
-<label style="color: black;" >{{trap}}</label>
-<br>
-<label style="color: black;" >{{esc}}</label>
-<br>
-<label style="color: black;" >{{guant}}</label>
-<br>
-<label style="color: black;" >{{vir}}</label>
-<br>
-<label style="color: black;" >{{cloro}}</label>
-<br>
-<label style="color: black;" >{{lav}}</label>
-<br>
-<label style="color: black;" >{{lys}}</label>
-<br>
-<label style="color: black;" >{{van}}</label>
-<br>
-<label style="color: black;" >{{nov}}</label>
- 
+
 </template>
 
 <script setup>
@@ -295,7 +280,7 @@ $ 1.490</label>
     .get('http://localhost:3000/ps')
     .then(response => {
       console.log(response.data)
-      det.value=response.data[0]
+      det.value=response.data
     })
   }
 
