@@ -1,10 +1,8 @@
 var express = require('express');
-const { Model } = require('mongoose');
-var router = express.Router();
-router.get('/', function(req, res, _) {
-  await Model.find();
-})
 
+var router = express.Router();
+
+let b=6
 router.post('/', function(req, res, _) {
   //llamar los datos enviados desde frontend , con el nombre seleccionado en frontend
   let suma1 = req.body.suma1
