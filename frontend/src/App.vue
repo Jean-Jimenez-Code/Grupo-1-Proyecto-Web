@@ -107,7 +107,7 @@ $ 1.490</label>
 
 
 <br>
-<div> ><!--mostraremos los datos de la base de datos como una lista -->
+<div> <!--mostraremos los datos de la base de datos como una lista -->
   <div v-for="d in det" :key="d">
     <label style="color: blue;" >{{d.nombre}} .</label>
     <label style="color: orange;" >Cantidad : {{d.cantidad}} .</label>
