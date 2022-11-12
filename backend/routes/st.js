@@ -2,7 +2,7 @@ var express = require('express');
 
 var router = express.Router();
 
-let b=6
+
 router.post('/', function(req, res, _) {
   //llamar los datos enviados desde frontend , con el nombre seleccionado en frontend
   let suma1 = req.body.suma1
@@ -17,7 +17,7 @@ router.post('/', function(req, res, _) {
   let suma10 = req.body.suma10
   let suma11 = req.body.suma11
   let st=0
-  
+  let palabra="precio total :"
   //ver si alguna cantidad es mayor a 0
   if(suma1 >0 ||suma2>0 || suma3 >0 ||suma4>0 ||suma5>0||suma6>0||suma7>0||suma8>0||suma9>0||suma10>0||suma11>0){
       //si alguna cantidad es mayor a 0 se empesara a guardar en el valor st el resultado de las siguientes operaciones
@@ -30,11 +30,12 @@ router.post('/', function(req, res, _) {
       st=st +suma7*1490
       st=st +suma8*2400
       st=st +suma9*2287
-      st=st +suma10*2990
+      st=st +suma10*4990
       st=st +suma11*1490
+      st=palabra +st
     }
   else{
-    st=0
+    st=palabra + 0
   }
   
   res.status(200).json({st:st}) //se devuelve el valor de st
