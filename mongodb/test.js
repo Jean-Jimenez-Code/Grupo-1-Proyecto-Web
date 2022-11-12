@@ -38,18 +38,17 @@ const ProdSchema = new Schema(
 );
 
 Prod = model('Prod', ProdSchema)
-
-data = [{'nombre': 'Detergente Ace Naturals perfumante Pack 4 unds 2.8 Lts ', 'cantidad': '1', 'precio': '$17.700'},
-{'nombre': 'Paños Multiuso - 3 UN ', 'cantidad': '1', 'precio': '$ 2.700'},
-{'nombre': 'Trapero Desinfección C/Ojal -10 UN ', 'cantidad': '1', 'precio': '$ 2.700 '},
-{'nombre': 'Pack 2 Escobillas De Wc Sopapo Baño Limpieza Desinfección ', 'cantidad': '1', 'precio': '$ 5.990'},
-{'nombre': 'Guante Conveniente M - UN ', 'cantidad': '1', 'precio': ' $3.190'},
-{'nombre': 'Virutilla gruesa grande  clásica ', 'cantidad': '1', 'precio': '$2.289'},
-{'nombre': 'CLORO TRADICIONAL 1000 CC CLOROX', 'cantidad': '1', 'precio': '$ 1.490'},
-{'nombre': 'lavalozas 750 ML ', 'cantidad': '1', 'precio': '$2.400'},
-{'nombre': 'Ambientes y Superficies', 'cantidad': '1', 'precio': ' $2.287'},
-{'nombre': 'Quitamancha en polvo rosa doypack 450 gr ', 'cantidad': '1', 'precio': '$4.990'},
-{'nombre': 'Toalla Nova Clásica Bajo Metraje ', 'cantidad': '1', 'precio': '$1.490'}]
+data = [{'nombre': 'Detergente Ace Naturals perfumante Pack 4 unds 2.8 Lts', 'cantidad': '0', 'precio': '0'},
+{'nombre': 'Paños Multiuso - 3 UN', 'cantidad': '0', 'precio': '0'},
+{'nombre': 'Trapero Desinfección C/Ojal -10 UN', 'cantidad': '0', 'precio': '0'},
+{'nombre': 'Pack 2 Escobillas De Wc Sopapo Baño Limpieza Desinfección', 'cantidad': '0', 'precio': '0'},
+{'nombre': 'Guante Conveniente M - UN', 'cantidad': '0', 'precio': '0'},
+{'nombre': 'Virutilla gruesa grande  clásica', 'cantidad': '0', 'precio': '0'},
+{'nombre': 'CLORO TRADICIONAL 1000 CC CLOROX', 'cantidad': '0', 'precio': '0'},
+{'nombre': 'lavalozas 750 ML', 'cantidad': '1', 'precio': '0'},
+{'nombre': 'Ambientes y Superficies', 'cantidad': '0', 'precio': '0'},
+{'nombre': 'Quitamancha en polvo rosa doypack 450 gr', 'cantidad': '0', 'precio': '0'},
+{'nombre': 'Toalla Nova Clásica Bajo Metraje', 'cantidad': '0', 'precio': '0'}]
 
 const addProd = async () => {
   await Prod.deleteMany({});
