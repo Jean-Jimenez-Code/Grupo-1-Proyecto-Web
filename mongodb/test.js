@@ -1,9 +1,9 @@
-const { mongoose, Schema, model } = require('mongoose');
+const { mongoose, Schema, model } = require('mongoose');//importamos el mongo, schema , model
 
 const server = '127.0.0.1:27017'; 
-const database = 'ls';
+const database = 'ls';//enviaremos los datos a una carpeta llamada ls en la base de datos
 
-const connectDB = async () => {
+const connectDB = async () => { //para que se conecte la base de datos
     try {
         await mongoose.connect(`mongodb://${server}/${database}`)
 
@@ -18,11 +18,11 @@ const connectDB = async () => {
 };
 
 
-const ProdSchema = new Schema(
+const ProdSchema = new Schema(//para asignar los atributos a las variables
   {
     nombre: {
-      type: String,
-      required: [true, 'Nombre is mandatory'],
+      type: String,//string osea que guardara los datos tipo texto
+      required: [true, 'Nombre is mandatory'],//is mandatory quiere decir que debe de existir un valor osea no debe ser nulo
     },
     cantidad: {
       type: String,
@@ -38,6 +38,7 @@ const ProdSchema = new Schema(
 );
 
 Prod = model('Prod', ProdSchema)
+//en data , ingresamos los datos en la base de datos, colocando un [{"nombre:dato"}], segun la variable que creamos arriba
 data = [{'nombre': 'Detergente Ace Naturals perfumante Pack 4 unds 2.8 Lts', 'cantidad': '0', 'precio': '0'},
 {'nombre': 'Paños Multiuso - 3 UN', 'cantidad': '0', 'precio': '0'},
 {'nombre': 'Trapero Desinfección C/Ojal -10 UN', 'cantidad': '0', 'precio': '0'},
@@ -53,8 +54,8 @@ data = [{'nombre': 'Detergente Ace Naturals perfumante Pack 4 unds 2.8 Lts', 'ca
 const addProd = async () => {
   await Prod.deleteMany({});
   await Prod.insertMany(data);
-  const ver = await Prod.find({});
-  console.log(ver);
+  const ver = await Prod.find({}); //en la variable de "ver" guardamos los datos pedidos con el comando Prod.find
+  console.log(ver);//para poder ver los datos por consola
 }
 
-connectDB();
+connectDB();//conectar la base de datos

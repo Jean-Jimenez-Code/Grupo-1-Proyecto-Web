@@ -1,26 +1,26 @@
 var express = require('express');
 var router = express.Router();
-const { mongoose, Schema, model } = require('mongoose');
+const { mongoose, Schema, model } = require('mongoose');//importamos el mongo, schema , model
 const server = '127.0.0.1:27017'; 
-const database = 'ls';
+const database = 'ls'; // la base de datos se guardara en una carpeta de nombre ls
 
-const connectDB = async () => {
+const connectDB = async () => { //para que se conecte la base de datos
     try {
         await mongoose.connect(`mongodb://${server}/${database}`)
 
-        console.log('MongoDB connected!!');
+        console.log('MongoDB connected!!'); //si se conecta en la terminal dira "MongoDB connected!!"
     } catch (err) {
-        console.log('Failed to connect to MongoDB', err);
+        console.log('Failed to connect to MongoDB', err);//si no se conecta en la terminal dira "Failed to connect to MongoDB"
     }
 };
 
 
 
-const ProdSchema = new Schema(
+const ProdSchema = new Schema( //para asignar los atributos a las variables
   {
     nombre: {
-      type: String,
-      required: [true, 'Nombre is mandatory'],
+      type: String, //string osea que guardara los datos tipo texto
+      required: [true, 'Nombre is mandatory'],//is mandatory quiere decir que debe de existir un valor osea no debe ser nulo
     },
     cantidad: {
       type: String,
@@ -30,14 +30,13 @@ const ProdSchema = new Schema(
         type: String,
         required: [true, 'precio is mandatory'],
     }
-    
   },
   { timestamps: true },
 );
 
 Prod = model('Prod', ProdSchema)
 
-connectDB()
+connectDB()//para conectar la base de datos
 
 
 router.post('/',async function(req , res, _) {
@@ -101,7 +100,7 @@ router.post('/',async function(req , res, _) {
 })
 
 
-router.get('/',async function(req , res, _) {
+router.get('/',async function(req , res, _) {//pedimos los datos a la base de datos
   console.log("hoola")
   let db=await Prod.find() //con prod.find hacemos llamado a la lista de base de datos para guardarlo en la variable db
   res.json(db);
