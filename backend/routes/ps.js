@@ -16,11 +16,13 @@ const connectDB = async () => { //para que se conecte la base de datos
 
 
 
-const ProdSchema = new Schema( //para asignar los atributos a las variables
+const ProdSchema = new Schema( //se asignara los atributos a las variables
   {
     nombre: {
-      type: String, //string osea que guardara los datos tipo texto
-      required: [true, 'Nombre is mandatory'],//is mandatory quiere decir que debe de existir un valor osea no debe ser nulo
+      type: String, 
+      //string osea que guardara los datos tipo texto
+      required: [true, 'Nombre is mandatory'],
+      //is mandatory quiere decir que debe de existir un valor osea no debe ser nulo
     },
     cantidad: {
       type: String,
@@ -100,9 +102,11 @@ router.post('/',async function(req , res, _) {
 })
 
 
-router.get('/',async function(req , res, _) {//pedimos los datos a la base de datos
+router.get('/',async function(req , res, _) {
+  //se pide los datos a la base de datos
   console.log("hoola")
-  let db=await Prod.find() //con prod.find hacemos llamado a la lista de base de datos para guardarlo en la variable db
+  let db=await Prod.find() 
+  //con prod.find se hace llamado a la lista de base de datos para guardarlo en la variable db
   res.json(db);
 })
 
