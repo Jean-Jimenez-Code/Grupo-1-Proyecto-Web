@@ -74,10 +74,10 @@ router.post('/',async function(req , res, _) {
  
   await Prod.findOneAndUpdate({nombre:"Trapero Desinfección C/Ojal -10 UN"}, { cantidad: cant3 })
   await Prod.findOneAndUpdate({nombre:"Trapero Desinfección C/Ojal -10 UN"}, { precio: suma3 })
-  
-  await Prod.findOneAndUpdate({nombre:"Guante Conveniente M - UN"}, { cantidad: cant4 })
-  await Prod.findOneAndUpdate({nombre:"Guante Conveniente M - UN"}, { precio: suma4 })
- 
+
+  await Prod.findOneAndUpdate({nombre:"Pack 2 Escobillas De Wc Sopapo Baño Limpieza Desinfección"}, { cantidad: cant4 })
+  await Prod.findOneAndUpdate({nombre:"Pack 2 Escobillas De Wc Sopapo Baño Limpieza Desinfección"}, { precio: suma4 })
+
   await Prod.findOneAndUpdate({nombre:"Guante Conveniente M - UN"}, { cantidad: cant5 })
   await Prod.findOneAndUpdate({nombre:"Guante Conveniente M - UN"}, { precio: suma5 })
   
