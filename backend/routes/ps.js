@@ -104,7 +104,7 @@ router.post('/',async function(req , res, _) {
 
 router.get('/',async function(req , res, _) {
   //se pide los datos a la base de datos
-  console.log("hoola")
+  console.log("Obteniendo Datos")
   let db=await Prod.find() 
   //con prod.find se hace llamado a la lista de base de datos para guardarlo en la variable db
   res.json(db);
